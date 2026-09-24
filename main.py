@@ -4,7 +4,7 @@ from flask import Flask, render_template_string, request, jsonify
 import telebot
 
 app = Flask(__name__)
-BOT_TOKEN = "8628341169:AAH0RN8xSL2GuKIhqiEElvndV_xWoUyw9WE"
+BOT_TOKEN = "8628341169:AAGvtzjg__ulFvf26meJf-hsOnFm3i6p7OE"
 bot = telebot.TeleBot(BOT_TOKEN)
 ADMIN_ID = "8173349543"
 
