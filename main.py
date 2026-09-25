@@ -4,9 +4,9 @@ from flask import Flask, render_template_string, request, jsonify
 import telebot
 
 app = Flask(__name__)
-BOT_TOKEN = "8628341169:AAGJT07ws-6a4AiNR04mBrOXeUK6CqxVT88"
+BOT_TOKEN = "8607829333:AAGekt5ymx5rt9K02HukVuH4jCWRL5ftZUQ"
 bot = telebot.TeleBot(BOT_TOKEN)
-ADMIN_ID = "8173349543"
+ADMIN_ID = "8817017983"
 
 # لینک پایه سایت شما در ریلیوی
 BASE_URL = "https://Determined-illumination-production-7799.up.railway.app"
